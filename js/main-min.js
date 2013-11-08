@@ -65,7 +65,7 @@ $(document).ready(function () {
         if ($("body").hasClass("viewing-page-4")) {
             $(".slide-3-title").removeClass("hide").addClass("animated fadeInLeft delay-1");
             $(".slide-3-1").removeClass("hide").addClass("animated fadeInLeft delay-3");
-            $(".iphone-3").removeClass("hide").addClass("animated fadeInUp delay-3");
+            $(".ipad-1").removeClass("hide").addClass("animated fadeInUp delay-3");
             $(".slide-3-2").removeClass("hide").addClass("animated fadeInDown delay-5");
             $(".slide-3-3").removeClass("hide").addClass("animated fadeInDown delay-6");
             $(".slide-3-scroll").removeClass("hide").addClass("animated fadeInDown delay-12");

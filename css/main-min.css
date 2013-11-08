@@ -28,7 +28,7 @@ p {
 @media (min-width: 384px) {
     p {
         font-size: 10px;
-        font-size: 1rem;
+        font-size: 0.625rem;
         line-height: 18px;
         line-height: 1.8rem;
     }
@@ -1022,7 +1022,7 @@ p span {
 }
 
 @media (min-width: 768px) {
-    .slide-3 .iphone-3 {
+    .slide-3 .iphone-3, .ipad-1 {
         margin-top: 80px;
     }
 }
@@ -1130,7 +1130,7 @@ p span {
     }
 }
 
-.iphone-1,.iphone-2,.iphone-3 {
+.iphone-1,.iphone-2,.iphone-3, .ipad-1 {
     max-width: 100%;
 }
 
