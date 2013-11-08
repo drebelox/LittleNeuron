@@ -1522,8 +1522,8 @@ section {
     display: block;
     font-family: "Raleway",cursive;
     color: #fff;
-    font-size: 18px;
-    font-size: 1.8rem;
+    font-size: 50px;
+    font-size: 3.125rem;
     -webkit-transition: all,400ms;
     -moz-transition: all,400ms;
     -o-transition: all,400ms;
