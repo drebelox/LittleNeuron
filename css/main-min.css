@@ -20,35 +20,27 @@ p {
     margin-bottom: 30px;
     font-family: "Raleway",sans-serif;
     font-size: 18px;
-    font-size: 1.8rem;
     line-height: 24px;
-    line-height: 2.4rem;
 }
 
 @media (min-width: 384px) {
     p {
         font-size: 10px;
-        font-size: 0.625rem;
         line-height: 18px;
-        line-height: 1.8rem;
     }
 }
 
 @media (min-width: 768px) {
     p {
         font-size: 20px;
-        font-size: 2rem;
         line-height: 28px;
-        line-height: 2.8rem;
     }
 }
 
 @media (min-width: 992px) {
     p {
         font-size: 22px;
-        font-size: 2.2rem;
         line-height: 32px;
-        line-height: 3.2rem;
     }
 }
 
@@ -1518,12 +1510,11 @@ section {
     left: 15px;
 }
 
-.icon span {
+.icon p {
     display: block;
     font-family: "Raleway",cursive;
     color: #fff;
-    font-size: 50px;
-    font-size: 3.125rem;
+    font-size: 20px;
     -webkit-transition: all,400ms;
     -moz-transition: all,400ms;
     -o-transition: all,400ms;
