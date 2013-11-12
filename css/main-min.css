@@ -934,7 +934,7 @@ p span {
     top: 0;
     left: 0;
     opacity: 0;
-    overflow: hidden;
+    overflow: scroll;
 }
 
 #big-video-wrap.hide-video {
@@ -948,6 +948,7 @@ p span {
 .home {
     background-color: #CC1467;
 }
+
 
 .home.full-color {
     background-color: #CC1467;
@@ -1112,7 +1113,7 @@ p span {
 
 .iphone-container {
     margin-top: 15px;
-    overflow: hidden;
+    overflow: scroll;
     max-height: 200px;
 }
 
@@ -1501,7 +1502,7 @@ body {
 }
 
 section {
-    overflow: hidden;
+    overflow: scroll;
 }
 
 .icon {
@@ -1550,5 +1551,12 @@ section {
     font-size: 16px;
 }
 
+#privacy {
+    background-color: #FF8280 !important;
+    width: 100%;
+    height: 3000px;
+}
 
-
+.pol {
+    top: 100px;
+}
