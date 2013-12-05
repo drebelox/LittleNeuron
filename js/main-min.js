@@ -1,4 +1,41 @@
-$(document).ready(function () {
+var title = document.getElementById('wordsTitle');
+var sightWords = document.getElementById('sightWords');
+var link = document.getElementById('link');
+var quotedWords = [];
+
+
+var concatString = function() {
+    var words = sightWords.value.split(',');
+    for (var i = 0; i < words.length; i++) {
+        quotedWords.push("\"" + words[i].replace(/\s/g, '') + "\"");
+    };
+    var url = btoa('sightwords://{"id":' + "\"" + title.value.toLowerCase() + "\"" + ',"words":[' + quotedWords + ']}');
+    link.value = 'http://littleneuron.org/link?q=' + url;
+    console.log(atob(url));
+    quotedWords = [];
+};
+
+var clearText = function() {
+    title.value = '';
+    sightWords.value = '';
+    link.value = '';
+}
+
+var clip = new ZeroClipboard(document.getElementById("copyBtn"), {
+    moviePath: "/img/ZeroClipboard.swf"
+});
+
+clip.on("load", function(client) {
+    client.on("complete", function(client, args) {
+        alert("Copied text to clipboard: " + link.value);
+    });
+});
+clip.on('dataRequested', function(client, args) {
+    client.setText(link.value);
+});
+
+
+$(document).ready(function() {
     var c = false,
         b = false;
     $(".slide").css("opacity", 1);
@@ -10,30 +47,30 @@ $(document).ready(function () {
         animation: "fade",
         speed: 2000
     });
-    $(".take-a-look").on("click", function () {
+    $(".take-a-look").on("click", function() {
         $(".onepage-pagination li:nth-child(2)").children().trigger("click");
     });
     $(".onepage-pagination").addClass("animated fadeInRight delay-3");
-    $(".onepage-pagination").children().each(function () {
+    $(".onepage-pagination").children().each(function() {
         switch ($(this).children().data("index")) {
-        case 1:
-            $(this).children().append("<i class='entypo-home'></i>");
-            break;
-        case 2:
-            $(this).children().append("<i class='entypo-dot'></i>");
-            break;
-        case 3:
-            $(this).children().append("<i class='entypo-dot-2'></i>");
-            break;
-        case 4:
-            $(this).children().append("<i class='entypo-dot-3'></i>");
-            break;
-        case 5:
-            $(this).children().append("<i class='entypo-mail'></i>");
-            break;
+            case 1:
+                $(this).children().append("<i class='entypo-home'></i>");
+                break;
+            case 2:
+                $(this).children().append("<i class='entypo-dot'></i>");
+                break;
+            case 3:
+                $(this).children().append("<i class='entypo-dot-2'></i>");
+                break;
+            case 4:
+                $(this).children().append("<i class='entypo-dot-3'></i>");
+                break;
+            case 5:
+                $(this).children().append("<i class='entypo-mail'></i>");
+                break;
         }
     });
-    setInterval(function () {
+    setInterval(function() {
         if ($("body").hasClass("viewing-page-2")) {
             $(".slide-1-title").removeClass("hide").addClass("animated fadeInRight delay-1");
             $(".slide-1-1").removeClass("hide").addClass("animated fadeInRight delay-3");
@@ -84,27 +121,27 @@ $(document).ready(function () {
             b = true;
         }
     }, 300);
-    $(".settings-icon").on("click", function () {
+    $(".settings-icon").on("click", function() {
         $(this).parent().toggleClass("open");
     });
-    $(".toggle-video").on("click", function () {
+    $(".toggle-video").on("click", function() {
         $("#big-video-wrap").toggleClass("hide-video");
     });
-    $(".toggle-opacity-first").on("click", function () {
+    $(".toggle-opacity-first").on("click", function() {
         $(".home").toggleClass("full-color");
     });
-    $(".toggle-opacity-all").on("click", function () {
+    $(".toggle-opacity-all").on("click", function() {
         $(".home").toggleClass("full-color");
         $(".slide-1").toggleClass("full-color");
         $(".slide-2").toggleClass("full-color");
         $(".slide-3").toggleClass("full-color");
         $(".contact").toggleClass("full-color");
     });
-    window.onload = function () {
+    window.onload = function() {
         $(".home-phone").toggleClass("hide animated fadeIn delay-2");
         $(".home-copy").toggleClass("col-sm-8 col-sm-offset-2 col-sm-6");
     };
-    $(".toggle-slide-fade").on("click", function () {
+    $(".toggle-slide-fade").on("click", function() {
         if (c === false) {
             c = true;
         } else {

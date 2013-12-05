@@ -1211,6 +1211,7 @@ p span {
     padding: 20px;
     border: 0px solid transparent;
     margin-left: 25px;
+    margin-right: 20px;
     width: 175px;
     height: 45px;
     float: left;
@@ -1266,12 +1267,12 @@ p span {
     transition: all,300ms;
 }
 
-@media (min-width: 768px) {
+/*@media (min-width: 768px) {
     .contact .btn-signup {
         width: 70px;
         height: 70px;
     }
-}
+}*/
 
 .contact .btn-signup:hover {
     color: #fff;
@@ -1572,4 +1573,19 @@ section {
     position: absolute;
     bottom: 10px;
     left: 10px;
+}
+
+
+#stringBtn {
+    position: absolute;
+}
+
+#clearBtn {
+    position: absolute;
+    top: 51%;
+}
+
+#copyBtn {
+    position: absolute;
+    top: 61%;
 }
